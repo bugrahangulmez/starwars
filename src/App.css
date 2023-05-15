@@ -1,0 +1,950 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+/*- - - - - - - - - - - - - - - Header Styles - - - - - - - - - - - - - - - - -*/
+.container-header {
+  position: relative;
+  z-index: 1;
+}
+.container-header header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100vw;
+  position: fixed;
+}
+.container-header header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  width: 50vw;
+  border-right: 0.1rem solid rgba(255, 255, 255, 0.2);
+  border-left: 0.1rem solid rgba(255, 255, 255, 0.2);
+}
+.container-header img {
+  width: 8rem;
+}
+.container-header p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 2.5rem;
+  font-family: Menlo;
+  font-weight: 600;
+  transition: all 300ms;
+}
+.container-header p:hover {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 2.5rem;
+  font-family: Menlo;
+  font-weight: 600;
+}
+/*- - - - - - - - - - - - - - - SearchBar Styles - - - - - - - - - - - - - - - - -*/
+
+.container-search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 25%;
+  top: 6rem;
+}
+
+.container-search-bar nav {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  width: 50vw;
+  border-right: 0.1rem solid rgba(255, 255, 255, 0.2);
+  border-left: 0.1rem solid rgba(255, 255, 255, 0.2);
+}
+.container-search-bar input {
+  outline: none;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+.container-search-bar .button-search {
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+  border: none;
+  margin-right: 1rem;
+  padding: 0.2rem 0.6rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  color: rgba(250, 204, 21, 0.8);
+  cursor: pointer;
+}
+.container-search-bar .button-clear {
+  outline: none;
+  border: none;
+  padding: 0.2rem 0.6rem;
+  border: 0.1rem solid rgba(255, 255, 255, 1);
+  border-radius: 0.5rem;
+  color: rgba(255, 255, 255, 1);
+  transition: all 300ms;
+  cursor: pointer;
+}
+.container-search-bar .button-clear:hover {
+  outline: none;
+  border: none;
+  padding: 0.2rem 0.6rem;
+  border: 0.1rem solid rgba(255, 255, 255, 1);
+  border-radius: 0.5rem;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+/*- - - - - - - - - - - - - - - Main Page Styles - - - - - - - - - - - - - - - - -*/
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 13rem 4rem;
+  width: 50vw;
+  border-right: 0.1rem solid rgba(255, 255, 255, 0.2);
+  border-left: 0.1rem solid rgba(255, 255, 255, 0.2);
+  margin: auto;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 0.1rem solid rgba(255, 255, 255, 0.2);
+  transition: all 300ms;
+  border-radius: 0.5rem;
+  min-height: 10rem;
+  width: 100%;
+}
+.card-container:hover {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 0.1rem solid rgba(255, 255, 255, 0.4);
+}
+.card-container .detail {
+  display: flex;
+  justify-content: space-between;
+  width: 20rem;
+  align-items: center;
+}
+.card-container .container-image {
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+.card-container .container-image img {
+  width: 10rem;
+  height: 8rem;
+  min-height: 9rem;
+  max-height: 9rem;
+  border-radius: 0.3rem;
+}
+.card-container .name {
+  color: rgba(250, 204, 21, 1);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.1rem;
+  line-height: 1.2rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+.card-container .title-model {
+  color: rgba(255, 255, 255, 0.4);
+  padding: 0.1rem;
+  font-size: 0.8rem;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+}
+.card-container .model {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.1rem;
+  font-size: 0.8rem;
+}
+.card-container .title-hyperdrive {
+  color: rgba(255, 255, 255, 0.4);
+  padding: 0.1rem;
+  font-size: 0.8rem;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+}
+.card-container .hyperdrive {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.1rem;
+  font-size: 0.8rem;
+}
+.card-container .btn-detail {
+  background-color: rgba(250, 204, 21, 0.2);
+  outline: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.card-container .btn-detail:hover {
+  background-color: rgba(250, 204, 21, 0.4);
+  outline: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+.btn-show-more {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  align-self: center;
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.5);
+  border-radius: 0.5rem;
+  transition: all 600ms;
+}
+.btn-show-more:hover {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  align-self: center;
+  padding: 0.5rem 9rem;
+  border: 0.1rem solid rgba(255, 255, 255, 1);
+  border-radius: 0.5rem;
+}
+/*- - - - - - - - - - - - - - - Detail Page Styles - - - - - - - - - - - - - - - - -*/
+#detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 7rem 4rem;
+  width: 50vw;
+  height: 100vh;
+  border-right: 0.1rem solid rgba(255, 255, 255, 0.2);
+  border-left: 0.1rem solid rgba(255, 255, 255, 0.2);
+  margin: auto;
+}
+#detail img {
+  width: 23rem;
+  height: 16rem;
+  border-radius: 0.5rem;
+  transition: all 500ms;
+}
+#detail img:hover {
+  width: 24rem;
+  height: 16rem;
+  border-radius: 0.5rem;
+  scale: 1.02;
+  box-shadow: #fff 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px,
+    red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+#detail .container-detail-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#detail .up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 4rem;
+  gap: 1rem;
+}
+#detail .up .ship-name {
+  color: rgba(250, 204, 21, 1);
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.4);
+  padding: 1rem;
+}
+#detail .down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+#detail .down .left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#detail .down .right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.btn-back {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  align-self: center;
+  padding: 0.3rem 0.6rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.5);
+  border-radius: 0.5rem;
+  transition: all 300ms;
+}
+.btn-back:hover {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  align-self: center;
+  padding: 0.3rem 0.6rem;
+  border: 0.1rem solid rgba(255, 255, 255, 1);
+  border-radius: 0.5rem;
+}
+/* - - - - - - - - - - Detail page each prop styling and conditional styling - - - - - - - - - - - - - - */
+#detail .down .left .model-title {
+  color: rgba(255, 255, 255, 0.4);
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.4);
+}
+#detail .down .left .model {
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 300ms;
+}
+#detail .down .left .model-title:hover ~ .model {
+  color: rgba(250, 204, 21, 0.8);
+}
+#detail .down .left .passengers-title {
+  color: rgba(255, 255, 255, 0.4);
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.4);
+}
+#detail .down .left .passengers {
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 300ms;
+}
+#detail .down .left .passengers-title:hover ~ .passengers {
+  color: rgba(250, 204, 21, 0.8);
+}
+#detail .down .left .mas-title {
+  color: rgba(255, 255, 255, 0.4);
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.4);
+}
+#detail .down .left .mas {
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 300ms;
+}
+#detail .down .left .mas-title:hover ~ .mas {
+  color: rgba(250, 204, 21, 0.8);
+}
+#detail .down .right .manufacturer-title {
+  color: rgba(255, 255, 255, 0.4);
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.4);
+}
+#detail .down .right .manufacturer {
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 300ms;
+}
+#detail .down .right .manufacturer-title:hover ~ .manufacturer {
+  color: rgba(250, 204, 21, 0.8);
+}
+#detail .down .right .crew-title {
+  color: rgba(255, 255, 255, 0.4);
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.4);
+}
+#detail .down .right .crew {
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 300ms;
+}
+#detail .down .right .crew-title:hover ~ .crew {
+  color: rgba(250, 204, 21, 0.8);
+}
+#detail .down .right .cargo-capacity-title {
+  color: rgba(255, 255, 255, 0.4);
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.4);
+}
+#detail .down .right .cargo-capacity {
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 300ms;
+}
+#detail .down .right .cargo-capacity-title:hover ~ .cargo-capacity {
+  color: rgba(250, 204, 21, 0.8);
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Media queries start from here (max width:1024) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@media screen and (max-width: 1024px) {
+  /*- - - - - - - - - - - - - - - Header Styles - - - - - - - - - - - - - - - - -*/
+  .container-header {
+    position: relative;
+    z-index: 1;
+  }
+  .container-header header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100vw;
+    position: fixed;
+  }
+  .container-header header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    width: 50vw;
+    border-right: 0.1rem solid rgba(255, 255, 255, 0.2);
+    border-left: 0.1rem solid rgba(255, 255, 255, 0.2);
+  }
+  .container-header img {
+    width: 6rem;
+  }
+  .container-header p {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 2rem;
+    font-family: Menlo;
+    font-weight: 600;
+    transition: all 300ms;
+  }
+  .container-header p:hover {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 2rem;
+    font-family: Menlo;
+    font-weight: 600;
+  }
+  /*- - - - - - - - - - - - - - - SearchBar Styles - - - - - - - - - - - - - - - - -*/
+
+  .container-search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 25%;
+    top: 5rem;
+  }
+
+  .container-search-bar nav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    width: 50vw;
+    border-right: 0.1rem solid rgba(255, 255, 255, 0.2);
+    border-left: 0.1rem solid rgba(255, 255, 255, 0.2);
+  }
+  .container-search-bar input {
+    outline: none;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .container-search-bar .button-search {
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: none;
+    border: none;
+    margin-right: 1rem;
+    padding: 0.2rem 0.6rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    color: rgba(250, 204, 21, 0.8);
+    cursor: pointer;
+  }
+  .container-search-bar .button-clear {
+    outline: none;
+    border: none;
+    padding: 0.2rem 0.6rem;
+    border: 0.1rem solid rgba(255, 255, 255, 1);
+    border-radius: 0.5rem;
+    color: rgba(255, 255, 255, 1);
+    transition: all 300ms;
+    cursor: pointer;
+  }
+  .container-search-bar .button-clear:hover {
+    outline: none;
+    border: none;
+    padding: 0.2rem 0.6rem;
+    border: 0.1rem solid rgba(255, 255, 255, 1);
+    border-radius: 0.5rem;
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 1);
+  }
+  /*- - - - - - - - - - - - - - - Main Page Styles - - - - - - - - - - - - - - - - -*/
+  #main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10rem 3rem;
+    width: 50vw;
+    border-right: 0.1rem solid rgba(255, 255, 255, 0.2);
+    border-left: 0.1rem solid rgba(255, 255, 255, 0.2);
+    margin: auto;
+  }
+
+  #main .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin: 0;
+    padding: 1rem 0;
+  }
+  .card-container .container-image {
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-container .container-image img {
+    width: 15rem;
+    height: 8rem;
+    min-height: 9rem;
+    max-height: 9rem;
+    border-radius: 0.3rem;
+  }
+  #main .card-container .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  #main .right {
+    width: 100%;
+  }
+  #main .left {
+    width: 100%;
+  }
+  #main .card-container .btn-detail {
+    background-color: rgba(250, 204, 21, 0.2);
+    outline: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: all 300ms;
+    width: 100%;
+  }
+
+  #main .card-container .btn-detail:hover {
+    background-color: rgba(250, 204, 21, 0.4);
+    outline: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: all 300ms;
+    width: 100%;
+  }
+  /*- - - - - - - - - - - - - - - Detail Page Styles - - - - - - - - - - - - - - - - -*/
+  #detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 6rem 4rem;
+    width: 50vw;
+    height: 100vh;
+    border-right: 0.1rem solid rgba(255, 255, 255, 0.2);
+    border-left: 0.1rem solid rgba(255, 255, 255, 0.2);
+    margin: auto;
+  }
+  #detail img {
+    width: 15.8rem;
+    height: 9rem;
+    border-radius: 0.5rem;
+    transition: all 500ms;
+  }
+  #detail img:hover {
+    width: 15.8rem;
+    height: 9rem;
+    border-radius: 0.5rem;
+    scale: 1.02;
+    box-shadow: #fff 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px,
+      red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  }
+  .btn-back {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    align-self: center;
+    padding: 0.2.5rem 0.5rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.5);
+    border-radius: 0.5rem;
+    transition: all 300ms;
+  }
+  .btn-back:hover {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    align-self: center;
+    padding: 0.2.5rem 0.5rem;
+    border: 0.1rem solid rgba(255, 255, 255, 1);
+    border-radius: 0.5rem;
+  }
+}
+@media screen and (max-width: 769px) {
+  /*- - - - - - - - - - - - - - - Header Styles - - - - - - - - - - - - - - - - -*/
+  .container-header {
+    position: relative;
+    z-index: 1;
+  }
+  .container-header header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100vw;
+    position: fixed;
+  }
+  .container-header header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100vw;
+    border-right: 0.1rem solid rgba(255, 255, 255, 0.2);
+    border-left: 0.1rem solid rgba(255, 255, 255, 0.2);
+  }
+  .container-header img {
+    width: 6rem;
+  }
+  .container-header p {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 2rem;
+    font-family: Menlo;
+    font-weight: 600;
+    transition: all 300ms;
+  }
+  .container-header p:hover {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 2rem;
+    font-family: Menlo;
+    font-weight: 600;
+  }
+  /*- - - - - - - - - - - - - - - SearchBar Styles - - - - - - - - - - - - - - - - -*/
+
+  .container-search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 5rem;
+  }
+
+  .container-search-bar nav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    width: 100vw;
+    border-right: 0.1rem solid rgba(255, 255, 255, 0.2);
+    border-left: 0.1rem solid rgba(255, 255, 255, 0.2);
+  }
+  .container-search-bar input {
+    outline: none;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .container-search-bar .button-search {
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: none;
+    border: none;
+    margin-right: 1rem;
+    padding: 0.2rem 0.6rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    color: rgba(250, 204, 21, 0.8);
+    cursor: pointer;
+  }
+  .container-search-bar .button-clear {
+    outline: none;
+    border: none;
+    padding: 0.2rem 0.6rem;
+    border: 0.1rem solid rgba(255, 255, 255, 1);
+    border-radius: 0.5rem;
+    color: rgba(255, 255, 255, 1);
+    transition: all 300ms;
+    cursor: pointer;
+  }
+  .container-search-bar .button-clear:hover {
+    outline: none;
+    border: none;
+    padding: 0.2rem 0.6rem;
+    border: 0.1rem solid rgba(255, 255, 255, 1);
+    border-radius: 0.5rem;
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 1);
+  }
+  /*- - - - - - - - - - - - - - - Main Page Styles - - - - - - - - - - - - - - - - -*/
+  #main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10rem 0;
+    width: 100vw;
+    border-right: 0.1rem solid rgba(255, 255, 255, 0.2);
+    border-left: 0.1rem solid rgba(255, 255, 255, 0.2);
+    margin: auto;
+  }
+
+  #main .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin: 0;
+    padding: 1rem 0;
+    width: 100%;
+  }
+  .card-container .container-image {
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .card-container .container-image img {
+    width: 15rem;
+    height: 8rem;
+    min-height: 9rem;
+    max-height: 9rem;
+    border-radius: 0.3rem;
+  }
+  #main .card-container .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60vw;
+    padding: 1rem 0;
+  }
+  #main .right {
+    width: 100%;
+  }
+  #main .left {
+    width: 100%;
+  }
+  #main .card-container .btn-detail {
+    background-color: rgba(250, 204, 21, 0.2);
+    outline: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: all 300ms;
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  #main .card-container .btn-detail:hover {
+    background-color: rgba(250, 204, 21, 0.4);
+    outline: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: all 300ms;
+    width: 100%;
+  }
+  /*- - - - - - - - - - - - - - - Detail Page Styles - - - - - - - - - - - - - - - - -*/
+  #detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 8rem 4rem;
+    width: 100vw;
+    height: 100vh;
+    border-right: 0.1rem solid rgba(255, 255, 255, 0.2);
+    border-left: 0.1rem solid rgba(255, 255, 255, 0.2);
+    margin: auto;
+  }
+  #detail img {
+    width: 15.8rem;
+    height: 9rem;
+    border-radius: 0.5rem;
+    transition: all 500ms;
+  }
+  #detail img:hover {
+    width: 15.8rem;
+    height: 9rem;
+    border-radius: 0.5rem;
+    scale: 1.02;
+    box-shadow: #fff 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px,
+      red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  }
+  .btn-back {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    align-self: center;
+    padding: 0.2rem 0.4rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.5);
+    border-radius: 0.5rem;
+    transition: all 300ms;
+    font-size: 0.9rem;
+  }
+  .btn-back:hover {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    align-self: center;
+    padding: 0.2rem 0.4rem;
+    border: 0.1rem solid rgba(255, 255, 255, 1);
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 481px) {
+  /*- - - - - - - - - - - - - - - Header Styles - - - - - - - - - - - - - - - - -*/
+
+  .container-header img {
+    width: 5rem;
+  }
+  .container-header p {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.6rem;
+    font-family: Menlo;
+    font-weight: 600;
+    transition: all 300ms;
+  }
+  .container-header p:hover {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.6rem;
+    font-family: Menlo;
+    font-weight: 600;
+  }
+  /*- - - - - - - - - - - - - - - SearchBar Styles - - - - - - - - - - - - - - - - -*/
+  .container-search-bar input {
+    outline: none;
+    padding: 0.3rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .container-search-bar .button-search {
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: none;
+    border: none;
+    margin-right: 1rem;
+    padding: 0.1rem 0.3rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    color: rgba(250, 204, 21, 0.8);
+    cursor: pointer;
+    font-size: 0.7rem;
+  }
+  .container-search-bar .button-clear {
+    outline: none;
+    border: none;
+    padding: 0.1rem 0.3rem;
+    border: 0.1rem solid rgba(255, 255, 255, 1);
+    border-radius: 0.5rem;
+    color: rgba(255, 255, 255, 1);
+    transition: all 300ms;
+    cursor: pointer;
+    font-size: 0.7rem;
+  }
+  .container-search-bar .button-clear:hover {
+    outline: none;
+    border: none;
+    padding: 0.1rem 0.3rem;
+    border: 0.1rem solid rgba(255, 255, 255, 1);
+    border-radius: 0.5rem;
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 1);
+    font-size: 0.7rem;
+  }
+  /*- - - - - - - - - - - - - - - Detail Page Styles - - - - - - - - - - - - - - - - -*/
+  #detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5.5rem 1rem;
+    width: 100vw;
+    height: 100%;
+    border-right: 0.1rem solid rgba(255, 255, 255, 0.2);
+    border-left: 0.1rem solid rgba(255, 255, 255, 0.2);
+    margin: auto;
+  }
+  #detail img {
+    width: 16rem;
+    height: 9rem;
+    border-radius: 0.5rem;
+    transition: all 500ms;
+  }
+  #detail img:hover {
+    width: 16rem;
+    height: 9rem;
+    border-radius: 0.5rem;
+    scale: 1.02;
+    box-shadow: #fff 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px,
+      red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  }
+  #detail .container-detail-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #detail .up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem;
+    gap: 1rem;
+  }
+  #detail .down {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+  }
+  #detail .down .left {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #detail .down .right {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .btn-back {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    align-self: center;
+    padding: 0.2rem 0.4rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.5);
+    border-radius: 0.5rem;
+    transition: all 300ms;
+    font-size: 0.8rem;
+  }
+  .btn-back:hover {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    align-self: center;
+    padding: 0.2rem 0.4rem;
+    border: 0.1rem solid rgba(255, 255, 255, 1);
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
